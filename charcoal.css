@@ -1,0 +1,75 @@
+/* Theme for Violentmonkey: Charcoal */
+/*
+ * This is a *dark* theme for Violentmonkey created by Maniroth Ouk (NeoISE).
+ *
+ * Uses the following colors:
+ *
+ * gray13 (#212121) = script disabled
+ * gray27 (#454545) = script enabled
+ * gray18 (#2E2E2E) = main background
+ * gray24 (#3D3D3D) = sidebar / message-modal background
+ *
+ * gray95 (#F2F2F2) = color for normal text
+ * gray90 (#E5E5E5) = color for active script text
+ * gray83 (#D4D4D4) = color for light gray text
+ *        (#AAAAAA) = color non-selected text in side-menu
+ *        (#CDCDCD) = last updated time text for active script
+ */
+
+*, .tab-settings, .tab-about, section > h3 {
+	background: #2E2E2E;
+	color: #F2F2F2;
+}
+
+.script, .script * {
+	background: #454545;
+	color: #E5E5E5;
+}
+
+.script:not(.disabled) > .script-info > .vl-tooltip > .secondary {
+	color: #CDCDCD;
+}
+
+.script.disabled, .script.disabled * {
+	background: #212121;
+	color: #D4D4D4;
+}
+
+aside, aside * {
+	background: #3D3D3D;
+}
+
+aside > .sidemenu :not(.active) {
+	color: #AAAAAA;
+}
+
+/* WIP: modal */
+/* modal {
+
+}
+*/
+
+body > div > .vl-modal {
+	background: #3D3D3D;
+}
+
+/*
+ * The second selector is specifically here to select the "span" that stores
+ * the string "Settings", which is different than the other menu entry.
+ */
+aside > .sidemenu > .active, aside > .sidemenu > .active * {
+	color: #F2F2F2;
+}
+
+.tab-about > div > .text-green {
+	color: lightgreen;
+}
+
+
+/*
+ * Resize the icon so that the borders of the text-box are visible
+ */
+.tab-installed > header > .filter-search > .icon {
+	height: 80%;
+	top: 3px;
+}
