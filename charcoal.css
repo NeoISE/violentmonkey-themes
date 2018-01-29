@@ -1,6 +1,7 @@
 /* Theme for Violentmonkey: Charcoal */
 /*
  * This is a *dark* theme for Violentmonkey created by Maniroth Ouk (NeoISE).
+ * Homepage: "https://github.com/NeoISE/violentmonkey-themes"
  *
  * Uses the following colors:
  *
@@ -14,41 +15,61 @@
  * gray83 (#D4D4D4) = color for light gray text
  *        (#AAAAAA) = color non-selected text in side-menu
  *        (#CDCDCD) = last updated time text for active script
+ *
+ * TODO:
+ *   - Script editor
  */
 
+:root {
+	--color-dark-1: #212121;
+	--color-dark-2: #2E2E2E;
+	--color-dark-3: #3D3D3D;
+	--color-dark-4: #454545;
+
+	--color-light-1: #AAAAAA;
+	--color-light-2: #CDCDCD;
+	--color-light-3: #D4D4D4;
+	--color-light-4: #E5E5E5;
+	--color-light-5: #F2F2F2;
+
+	--color-full-transparent: rgba(0,0,0,0);
+}
+
 *, .tab-settings, .tab-about, section > h3 {
-	background: #2E2E2E;
-	color: #F2F2F2;
+	background: var(--color-dark-2);
+	color: var(--color-light-5);
 }
 
 .script, .script * {
-	background: #454545;
-	color: #E5E5E5;
+	background: var(--color-dark-4);
+	color: var(--color-light-4);
 }
 
 .script:not(.disabled) > .script-info > .vl-tooltip > .secondary {
-	color: #CDCDCD;
+	color: var(--color-light-2);
 }
 
 .script.disabled, .script.disabled * {
-	background: #212121;
-	color: #D4D4D4;
+	background: var(--color-dark-1);
+	color: var(--color-light-3);
 }
 
 aside, aside * {
-	background: #3D3D3D;
+	background: var(--color-dark-3);
 }
 
 aside > .sidemenu :not(.active) {
-	color: #AAAAAA;
+	color: var(--color-light-1);
 }
 
 .vl-modal {
-	background: rgba(0,0,0,0);
+	/* for the backdrop of the modal */
+	background: var(--color-full-transparent);
 }
 
 .vl-modal div:last-of-type {
-	background: #3D3D3D;
+	/* for the background of the modal */
+	background: var(--color-dark-3);
 }
 
 /*
@@ -56,7 +77,7 @@ aside > .sidemenu :not(.active) {
  * the string "Settings", which is different than the other menu entry.
  */
 aside > .sidemenu > .active, aside > .sidemenu > .active * {
-	color: #F2F2F2;
+	color: var(--color-light-5);
 }
 
 .tab-about > div > .text-green {
