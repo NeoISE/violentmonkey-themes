@@ -43,13 +43,11 @@ aside > .sidemenu :not(.active) {
 	color: #AAAAAA;
 }
 
-/* WIP: modal */
-/* modal {
-
+.vl-modal {
+	background: rgba(0,0,0,0);
 }
-*/
 
-body > div > .vl-modal {
+.vl-modal div:last-of-type {
 	background: #3D3D3D;
 }
 
